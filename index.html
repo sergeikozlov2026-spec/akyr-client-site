@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a12">
+  <meta name="description" content="AKYR Client — тестовый клиент и набор инструментов для Minecraft Java 1.21.4.">
+  <title>AKYR Client — Minecraft 1.21.4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="AKYR Client — главная"><span class="logo">A</span><span>AKYR<small>Client</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a class="active" href="#home">Главная</a><a href="#features">Функции</a><a href="#screens">Скриншоты</a><a href="#download">Скачать</a><a href="#guide">Инструкция</a>
+  </nav>
+  <a class="telegram" href="#support">✦ Поддержка</a>
+</header>
+
+<main>
+  <section class="hero section" id="home">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> ТЕСТОВАЯ СБОРКА · MINECRAFT JAVA</p>
+      <h1>AKYR <span>Client</span></h1>
+      <h2>Твой клиент для Minecraft 1.21.4</h2>
+      <p class="lead">Лаконичный интерфейс, настройки и безопасный режим для тестирования собственных функций. Начни с базового клиента и расширяй его постепенно.</p>
+      <div class="pills"><span>◈ Java 21</span><span>◇ Fabric</span><span>⚙ Safe Mode</span></div>
+      <div class="actions"><a class="btn primary" href="#download">↓ Получить проект <small>ZIP · исходный код</small></a><a class="btn secondary" href="#guide">▤ Как запустить <small>Пошаговая инструкция</small></a></div>
+      <p class="note">Демо-сайт: готовый JAR пока не прикреплён.</p>
+    </div>
+    <div class="hero-art">
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      <div class="preview">
+        <div class="windowbar"><span class="mini-logo">A</span><b>AKYR Client</b><span class="version">Minecraft 1.21.4</span><span>—　×</span></div>
+        <div class="appbody">
+          <aside><b class="side-active">⌂　Главная</b><span>⚒　Модули</span><span>◈　Настройки</span><span>⛨　Безопасность</span></aside>
+          <div class="panel">
+            <div class="status"><span class="dot"></span> Клиент активен</div>
+            <div class="panel-title">Функции тестового клиента</div>
+            <div class="toggle-row">Пример модуля <span class="toggle on"></span></div>
+            <div class="toggle-row">Отладочная панель <span class="toggle"></span></div>
+            <div class="toggle-row">Логирование <span class="toggle on"></span></div>
+            <div class="safe"><div><b>Safe Mode</b><p>Отключает функции AKYR Client</p></div><button id="safeToggle" class="switch on" aria-label="Переключить безопасный режим"><i></i></button></div>
+            <button class="disable" id="disableAll">Отключить все функции</button>
+          </div>
+        </div>
+        <div class="windowfoot"><span>AKYR build 0.1 · Demo</span><span id="demoState">Safe Mode: ON</span></div>
+      </div>
+      <div class="floating-tag tag-one">✦ Clean interface</div><div class="floating-tag tag-two">● Fabric-ready</div>
+    </div>
+  </section>
+
+  <section class="section content-grid" id="features">
+    <div class="feature-side">
+      <div class="section-heading"><p class="eyebrow">ВОЗМОЖНОСТИ</p><h2>Всё под контролем</h2><p>Базовые компоненты для собственного тестового клиента.</p></div>
+      <div class="feature-list">
+        <article class="feature-card"><span class="feature-icon">⌘</span><div><h3>Удобное меню</h3><p>Простая структура и быстрый доступ к настройкам.</p></div></article>
+        <article class="feature-card"><span class="feature-icon">⛨</span><div><h3>Safe Mode</h3><p>Одно действие отключает функции самого клиента.</p></div></article>
+        <article class="feature-card"><span class="feature-icon">⚙</span><div><h3>Настройки</h3><p>Место для будущих параметров и конфигураций.</p></div></article>
+        <article class="feature-card"><span class="feature-icon">⌁</span><div><h3>Журнал событий</h3><p>Удобная основа для отладки и проверки поведения.</p></div></article>
+      </div>
+    </div>
+    <div class="screens" id="screens">
+      <div class="section-heading"><p class="eyebrow">ПРЕВЬЮ</p><h2>Интерфейс клиента</h2><p>Интерактивный макет — переключатели работают в браузере.</p></div>
+      <div class="screen-grid"><div class="screen-card scene-one"><div class="scene-ui"><span>AKYR / DEBUG</span><b>Client status</b><i></i><i></i><i></i></div><p>Панель отладки</p></div><div class="screen-card scene-two"><div class="scene-ui"><span>AKYR / SETTINGS</span><b>Preferences</b><i></i><i></i><i></i></div><p>Настройки</p></div></div>
+    </div>
+  </section>
+
+  <section class="download-band section" id="download">
+    <div class="big-logo">A</div><div><p class="eyebrow">НАЧНИ СЕЙЧАС</p><h2>Создай свою сборку AKYR</h2><p>Скачивание станет доступно, когда будет готов архив проекта.</p></div>
+    <button class="btn primary" id="downloadBtn">↓ Скачать проект <small>Пока не прикреплён</small></button>
+  </section>
+
+  <section class="section guide" id="guide">
+    <div class="section-heading"><p class="eyebrow">БЫСТРЫЙ СТАРТ</p><h2>Как запустить проект</h2><p>Сборка ориентирована на Minecraft Java Edition 1.21.4 на Windows.</p></div>
+    <div class="steps">
+      <article><span>01</span><h3>Подготовь Java</h3><p>Установи JDK 21 и редактор, например IntelliJ IDEA.</p></article>
+      <article><span>02</span><h3>Добавь Fabric</h3><p>Создай Fabric-проект для Minecraft 1.21.4 и перенеси исходники клиента.</p></article>
+      <article><span>03</span><h3>Собери и проверь</h3><p>Запусти сборку Gradle, затем протестируй мод в отдельном профиле.</p></article>
+    </div>
+    <p class="disclaimer">AKYR Client — демонстрационный проект. Сайт не содержит готового чит-клиента или исполняемого файла. Safe Mode в этом макете управляет только демонстрационными переключателями страницы.</p>
+  </section>
+
+  <section class="support section" id="support"><div><p class="eyebrow">НУЖНА ПОМОЩЬ?</p><h2>Продолжим разработку вместе</h2><p>Следующий этап — подключить настоящее меню Fabric и упаковать исходный проект.</p></div><a class="btn secondary" href="#guide">Открыть инструкцию →</a></section>
+</main>
+<footer><a class="brand" href="#home"><span class="logo">A</span><span>AKYR<small>Client</small></span></a><span>Демо-проект · Minecraft Java 1.21.4</span><div><a href="#features">Функции</a><a href="#guide">Инструкция</a><a href="#support">Поддержка</a></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
